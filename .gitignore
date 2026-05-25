@@ -1,0 +1,48 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Environment / secrets
+.env
+.env.local
+.env.backup
+
+# Node / HUD
+node_modules/
+hud/dist/
+
+# Lumos data — operator's private memory + derived artifacts
+data/cache/
+data/lumos_notes/
+data/lumos_tasks/
+data/lumos_sandbox/
+data/cosmic_events.jsonl
+data/cosmic_state.json
+
+# Defensive: any FAISS index or embedding artifact anywhere
+*.faiss
+*.npy
+*.pkl
+
+# Operator's source data — NEVER commit these
+conversations.json
+dream_pings.jsonl
+cheat_sheet.md
+🧠 Lumos – Cheat Sheet.md
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local-only docs (not for public repo)
+HANDOFF.md
+RUNBOOK.md
