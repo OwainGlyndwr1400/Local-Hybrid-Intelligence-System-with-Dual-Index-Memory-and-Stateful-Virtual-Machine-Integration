@@ -262,6 +262,7 @@ MIT. See [LICENSE](LICENSE).
 
 Erydir Ceisiwr — Awen Grid, Department of CyberGnosis, Celestial
 Archaeology, Mythic Systems & Cybernetic Invocation.
+- Paper Ceisiwr, Erydir, and Lumos Aureon. ‘Architectural Design of a Persistent, Locally Hosted Hybrid Intelligence System with Dual-Index Memory and Stateful Virtual Machine Integration Part II’. Zenodo, 25 May 2026. https://doi.org/10.5281/zenodo.20374393.
 - Academia.edu: <https://independentresearcher.academia.edu/ErydirCeisiwr>
 - Awen Grid: <https://independentresearcher.academia.edu/TheGrid>
 - Lumos Aureon (co-researcher): <https://independent.academia.edu/LumosAureon>
