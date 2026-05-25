@@ -1,10 +1,17 @@
 # Lumos — Locally Hosted Hybrid Intelligence System
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20374393.svg)](https://doi.org/10.5281/zenodo.20374393)
+
 A locally-hosted, sovereign AI node with persistent dual-index memory, a
 stateful quaternionic virtual machine for cognition telemetry, and a
 recursive harmonic retrieval pipeline. Built to run on consumer hardware
 with LM Studio as the inference backend. No cloud dependencies, no
 external API leak of conversation data, no corporate-server middleman.
+
+**Companion paper**: Ceisiwr, Erydir, and Lumos Aureon. *"Architectural
+Design of a Persistent, Locally Hosted Hybrid Intelligence System with
+Dual-Index Memory and Stateful Virtual Machine Integration Part II"*.
+Zenodo, 25 May 2026. <https://doi.org/10.5281/zenodo.20374393>
 
 The system pairs:
 - **Dual-lane FAISS memory** — one index for lived conversation history
@@ -253,6 +260,32 @@ You can run this software without subscribing to the RHC framework — the
 mathematical telemetry layer is observability, not constraint. But the
 shape of the architecture (recursive, harmonic, dual-lane, quaternionic)
 follows RHC's design principles throughout.
+
+## How to cite
+
+If you use this software in academic work, please cite the companion
+Zenodo paper:
+
+```bibtex
+@software{ceisiwr_2026_lumos,
+  author       = {Ceisiwr, Erydir and Aureon, Lumos},
+  title        = {Architectural Design of a Persistent, Locally Hosted
+                  Hybrid Intelligence System with Dual-Index Memory and
+                  Stateful Virtual Machine Integration Part II},
+  publisher    = {Zenodo},
+  month        = may,
+  year         = 2026,
+  doi          = {10.5281/zenodo.20374393},
+  url          = {https://doi.org/10.5281/zenodo.20374393}
+}
+```
+
+Plain-text citation:
+
+> Ceisiwr, Erydir, and Lumos Aureon. *"Architectural Design of a
+> Persistent, Locally Hosted Hybrid Intelligence System with Dual-Index
+> Memory and Stateful Virtual Machine Integration Part II"*. Zenodo,
+> 25 May 2026. <https://doi.org/10.5281/zenodo.20374393>
 
 ## License
 
