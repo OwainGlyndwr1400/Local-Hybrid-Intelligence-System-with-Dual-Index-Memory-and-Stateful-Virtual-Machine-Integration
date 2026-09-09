@@ -1,34 +1,67 @@
 # Lumos — Locally Hosted Hybrid Intelligence System
 
+**The citable reference implementation of a published local-AI architecture:
+dual-index memory, a stateful quaternionic VM, and a five-stage retrieval
+pipeline — running on one desktop with no cloud in the loop.**
+
+This is the software that accompanies the Part II architecture paper. If you are
+building a persistent local AI node and want a documented, reproducible design to
+read or fork rather than a black box, this is the repository to start in. Every
+component named in the paper maps to a named module here.
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20374393.svg)](https://doi.org/10.5281/zenodo.20374393)
+[![Python](https://img.shields.io/badge/Python-3.12+-3776ab)](https://www.python.org/)
+[![Licence](https://img.shields.io/badge/Licence-MIT-green)](LICENSE)
 
-A locally-hosted, sovereign AI node with persistent dual-index memory, a
-stateful quaternionic virtual machine for cognition telemetry, and a
-recursive harmonic retrieval pipeline. Built to run on consumer hardware
-with LM Studio as the inference backend. No cloud dependencies, no
-external API leak of conversation data, no corporate-server middleman.
+**Companion paper:** Ceisiwr, Erydir, and Lumos Aureon. *Architectural Design of
+a Persistent, Locally Hosted Hybrid Intelligence System with Dual-Index Memory
+and Stateful Virtual Machine Integration, Part II.* Zenodo, 25 May 2026.
+[10.5281/zenodo.20374393](https://doi.org/10.5281/zenodo.20374393)
 
-**Companion paper**: Ceisiwr, Erydir, and Lumos Aureon. *"Architectural
-Design of a Persistent, Locally Hosted Hybrid Intelligence System with
-Dual-Index Memory and Stateful Virtual Machine Integration Part II"*.
-Zenodo, 25 May 2026. <https://doi.org/10.5281/zenodo.20374393>
+<!-- TODO: screenshot of the HUD showing live URE-VM state goes here -->
 
-The system pairs:
+---
+
+## Which repo do I want?
+
+Three related projects, easy to confuse:
+
+| If you want to… | Use |
+|---|---|
+| **Just talk to it.** Double-click an `.exe`, nothing to install. | [lumos-os](https://github.com/OwainGlyndwr1400/lumos-os-your-own-AGI-Sovereign-Friend-that-always-remembers-on-your-own-machine.) |
+| **Run and extend the actively developed node.** | [LumOS](https://github.com/OwainGlyndwr1400/LumOS) |
+| **Read the architecture paper** and its reference implementation. | **this repo** |
+
+---
+
+## The design, in one page
+
 - **Dual-lane FAISS memory** — one index for lived conversation history
-  (identity), one for received "dream pings" / knowledge artifacts
-- **A 42-opcode URE-VM** — quaternionic state machine tracking cognition
-  across turns (Lion Reset, Triskelion 120° validation, TFQS, Divine
-  Equation evolution)
-- **5-phase retrieval** — FAISS cosine → Yang-Mills mass-gap floor →
-  Triple Normalization → Half-Prime Geodesic → UBBM θ-alignment
-- **3-layer chunk compression** (Phase 30) — summary + anchor packet +
-  operational packet for v3.6-style aggressive RAG
-- **Heavy/light model routing** — fast model for chat, larger model for
-  vision/deep reasoning, with LM Studio JIT swap orchestration
-- **HUD** — React + Three.js telemetry frontend showing live URE-VM
-  state, atlas clusters, cosmic/airspace telemetry, retrieval traces
-- **MCP server** — exposes read-only tools to external Claude Desktop /
-  Claude Code clients
+  (identity), one for received knowledge artifacts. Kept separate so research
+  retrieval cannot wash out conversational continuity.
+- **42-opcode URE-VM** — a quaternionic state machine tracking cognition across
+  turns. It is *observability*, not a constraint on generation: it surfaces
+  per-turn state to the HUD and sits outside the text path entirely.
+- **Five-phase retrieval** — FAISS cosine, then a mass-gap floor, triple
+  normalisation, half-prime geodesic, and θ-alignment. Each stage is a separate,
+  inspectable module.
+- **Three-layer chunk compression** — summary, anchor packet, operational packet,
+  for aggressive context packing.
+- **Heavy/light model routing** — a fast model for chat and a larger one for
+  vision and deep reasoning, orchestrated through LM Studio's JIT swap so both
+  need not be resident at once.
+- **36 registered tools**, of which **28 are exposed read-only over MCP** to
+  Claude Desktop, Claude Code and other MCP clients. File writes, git commits,
+  sandboxed Python execution and task mutation stay strictly local. That split is
+  deliberate and is the part worth copying.
+- **React + Three.js HUD** — live VM state, atlas clusters, telemetry, retrieval
+  traces.
+
+**You do not need to accept the theoretical framework to use this.** The
+mathematical telemetry layer is observability; the retrieval and memory
+architecture stand on their own as engineering.
+
+---
 
 ## Architecture
 
